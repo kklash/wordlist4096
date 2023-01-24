@@ -2,6 +2,10 @@
 
 This is a robust English wordlist for encoding data. It was inspired by previous natural language encoding systems, such as [What3Words](https://what3words.com/), [BIP-0039](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki), and [Diceware](https://diceware.dmuth.org/).
 
+This wordlist was created for [the Mnemonikey project](https://github.com/kklash/mnemonikey).
+
+## Specification
+
 Each word in this list represents one of 4096 equally possible options. As per [Claude Shannon's theory of information](https://en.wikipedia.org/wiki/Information_theory), a word from this list encodes 12 bits of information, since $log_2(4096) = 12$ (i.e. $2^{12} = 4096$)
 
 But this wordlist is not composed of any old random words. The list has been carefully constructed to fulfill the following properties:
