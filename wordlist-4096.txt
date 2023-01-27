@@ -1201,7 +1201,7 @@ employer
 empower
 empty
 emu
-emulator
+emulate
 enamel
 enchant
 enclose
