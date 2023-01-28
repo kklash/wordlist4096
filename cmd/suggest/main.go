@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/kklash/wordlist-4096/validate"
+	"github.com/kklash/wordlist4096/validate"
 )
 
 var plainWordRegExp = regexp.MustCompile("^[a-z]*$")
@@ -26,7 +26,7 @@ func run() error {
 	if err != nil {
 		return err
 	}
-	allWords, err := readWordList("wordlist-4096.txt")
+	allWords, err := readWordList("wordlist4096.txt")
 	if err != nil {
 		return err
 	}

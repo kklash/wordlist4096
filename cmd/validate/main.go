@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/kklash/wordlist-4096/validate"
+	"github.com/kklash/wordlist4096/validate"
 )
 
 func CheckWordLengths(words []string) (ok bool) {

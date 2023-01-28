@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/kklash/wordlist-4096/damlev"
+	"github.com/kklash/wordlist4096/damlev"
 )
 
 func DuplicateWords(words []string) error {

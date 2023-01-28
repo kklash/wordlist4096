@@ -1,6 +1,6 @@
 .PHONY: validate
 validate:
-	go run ./cmd/validate wordlist-4096.txt
+	go run ./cmd/validate wordlist4096.txt
 
 .PHONY: suggest
 suggest:
@@ -8,4 +8,4 @@ suggest:
 
 .PHONY: tidy
 tidy:
-	sort -u -o wordlist-4096.txt wordlist-4096.txt
+	sort -u -o wordlist4096.txt wordlist4096.txt
