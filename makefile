@@ -1,6 +1,6 @@
 .PHONY: validate
 validate:
-	go run ./cmd/validate wordlist4096.txt
+	go test -v
 
 .PHONY: suggest
 suggest:
