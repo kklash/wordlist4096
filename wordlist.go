@@ -5,13 +5,15 @@ import (
 	"strings"
 )
 
-var (
-	// WordList is the mnemonic encoding wordlist in alphabetical sorted order.
-	WordList []string
+// BitsPerWord is the number of bits of information represented by each word
+// in the wordlist.
+const BitsPerWord uint = 12
 
-	// WordMap is a mapping of words to their indices in the wordlist.
-	WordMap = make(map[string]uint16)
-)
+// WordList is the mnemonic encoding wordlist in alphabetical sorted order.
+var WordList []string
+
+// WordMap is a mapping of words to their indices in the wordlist.
+var WordMap = make(map[string]uint16)
 
 //go:embed wordlist4096.txt
 var rawWordList string
