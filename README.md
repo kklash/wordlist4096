@@ -18,13 +18,11 @@ But this wordlist is not composed of any old random words. The list has been car
 |Every word is uniquely identifiable by at most the first four characters.|Allows fast automated interpretation when typing words as input.|
 |The [Damerau-Levenshtein distance](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance) between every word in the wordlist is at least 2.|Reduces the risk of typos which could convert one valid word into another valid one by accident.|
 
-## Scripts
+# :rotating_light: :warning: WARNING :warning: :rotating_light:
 
-The tooling for this package requires a [Golang](https://go.dev) compiler.
+### wordlist4096 is **NOT YET FINALIZED**
 
-- To validate the computable properties of the wordlist, run `make validate`.
-- To suggest new possible words to add to the wordlist, run `make suggest`. (This pulls from `/usr/share/dict/words`, only available on unix systems)
-- To sort the wordlist and deduplicate words, run `make tidy`.
+Until this warning is removed, wordlist4096 is still open for contributions and may be changed at any time. Once the wordlist is finalized and ready for release, this warning will be removed and a `v1.0.0` tag will be pushed to Github.
 
 ## Antecedents
 
@@ -39,3 +37,21 @@ This project was inspired by the following natural-language encoding projects:
 - [RFC 1760](https://www.rfc-editor.org/rfc/rfc1760)
 - [RFC 2289](https://www.rfc-editor.org/rfc/rfc2289)
 - [mnemonicode](https://github.com/singpolyma/mnemonicode)
+
+## Contributing
+
+The tooling for this package requires a [Golang](https://go.dev) compiler.
+
+For the moment, `wordlist4096` is not finalized. I'm happy to accept PRs to improve the wordlist. Please ensure your changes fulfill these requirements:
+
+1. Any changes must pass tests. To run tests, use `go test` (or `make validate`).
+2. Any new words must not contravene the heuristic properties discussed in the [Specification](#Specification) section.
+3. Any word deletions or changes must be justifiable.
+
+Be aware that discussions about what words are 'memorable' or 'confusing' may be highly subjective. In review, I may veto any arbitrary decision between words, simply to save time.
+
+## Scripts
+
+- To validate the computable properties of the wordlist, run `make validate`.
+- To suggest new possible words to add to the wordlist, run `make suggest`. (This pulls from `/usr/share/dict/words`, only available on unix systems)
+- To sort the wordlist and deduplicate words, run `make tidy`.

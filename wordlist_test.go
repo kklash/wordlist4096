@@ -18,6 +18,12 @@ func TestSorting(t *testing.T) {
 	}
 }
 
+func TestWordListLength(t *testing.T) {
+	if len(WordList) != 4096 {
+		t.Errorf("wordlist length is %d, not 4096", len(WordList))
+	}
+}
+
 func TestWordLengths(t *testing.T) {
 	for _, word := range WordList {
 		if err := validate.WordLength(word); err != nil {
