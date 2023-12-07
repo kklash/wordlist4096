@@ -1,17 +1,14 @@
 package wordlist4096
 
 import (
-	"sort"
 	"testing"
 
 	"github.com/kklash/wordlist4096/validate"
 )
 
 func TestSorting(t *testing.T) {
-	sortedWordList := append([]string{}, WordList...)
-	sort.Strings(sortedWordList)
-	for i, word := range WordList {
-		if sortedWordList[i] != word {
+	for i := 1; i < len(WordList); i++ {
+		if WordList[i] < WordList[i-1] {
 			t.Errorf("wordlist file is not sorted; run 'make sort'")
 			return
 		}
