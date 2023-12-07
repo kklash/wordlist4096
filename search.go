@@ -23,7 +23,8 @@ type SearchResult struct {
 // Search runs a binary search on the wordlist to find any words which match
 // the given input query string. This is useful for autocomplete and error correction.
 //
-// The input query must be in lower case to return any results.
+// The input query must be in lower case to return any results. If the query
+// is empty, returns a SearchResult with an empty suffixes list.
 func Search(query string) *SearchResult {
 	result := &SearchResult{Suffixes: []string{}}
 	if query == "" {
