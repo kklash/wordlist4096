@@ -18,12 +18,6 @@ But this wordlist is not composed of any old random words. The list has been car
 |Every word is uniquely identifiable by at most the first four characters.|Allows fast automated interpretation when typing words as input.|
 |The [Damerau-Levenshtein distance](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance) between every word in the wordlist is at least 2.|Reduces the risk of typos which could convert one valid word into another valid one by accident.|
 
-# :rotating_light: :warning: WARNING :warning: :rotating_light:
-
-### wordlist4096 is **NOT YET FINALIZED**
-
-Until this warning is removed, wordlist4096 is still open for contributions and may be changed at any time. Once the wordlist is finalized and ready for release, this warning will be removed and a `v1.0.0` tag will be pushed to Github.
-
 ## Antecedents
 
 This project was inspired by the following natural-language encoding projects:
